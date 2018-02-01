@@ -4,15 +4,15 @@ import os
 # path and dataset parameter
 #
 
-DATA_PATH = 'data'
+DATA_PATH = '/data/hzwangjian1'
 
-PASCAL_PATH = os.path.join(DATA_PATH, 'pascal_voc')
+PASCAL_PATH = os.path.join(DATA_PATH, 'TFTemplate')
 
-CACHE_PATH = os.path.join(PASCAL_PATH, 'cache')
+CACHE_PATH = os.path.join(PASCAL_PATH, 'yolo')
 
-OUTPUT_DIR = os.path.join(PASCAL_PATH, 'output')
+OUTPUT_DIR = os.path.join(PASCAL_PATH, 'yolo')
 
-WEIGHTS_DIR = os.path.join(PASCAL_PATH, 'weight')
+WEIGHTS_DIR = os.path.join(PASCAL_PATH, 'yolo')
 
 WEIGHTS_FILE = None
 # WEIGHTS_FILE = os.path.join(DATA_PATH, 'weights', 'YOLO_small.ckpt')
