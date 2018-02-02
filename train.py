@@ -49,7 +49,9 @@ class Solver(object):
 
         gpu_options = tf.GPUOptions()
         config = tf.ConfigProto(gpu_options=gpu_options)
+        config.gpu_options.allow_growth = True
         self.sess = tf.Session(config=config)
+
         self.sess.run(tf.global_variables_initializer())
 
         if self.weights_file is not None:
