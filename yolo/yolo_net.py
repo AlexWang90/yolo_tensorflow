@@ -145,7 +145,7 @@ class YOLONet(object):
             offset = tf.constant(self.offset, dtype=tf.float32)
             offset = tf.reshape(offset, [1, self.cell_size, self.cell_size, self.boxes_per_cell])
             offset = tf.tile(offset, [self.batch_size, 1, 1, 1])
-            predict_boxes_tran = tf.stack([(predict_boxes[:, :, :, :, 0] + offset) / self.cell_size,
+            predict_boxes_tran = tf.stack([(predict_boxes[:, :, :, :, 0] + offset) / self.cell_size,  # 偏移位置 + 以当前位置为中心的box坐标
                                            (predict_boxes[:, :, :, :, 1] + tf.transpose(offset, (0, 2, 1, 3))) / self.cell_size,
                                            tf.square(predict_boxes[:, :, :, :, 2]),
                                            tf.square(predict_boxes[:, :, :, :, 3])])
